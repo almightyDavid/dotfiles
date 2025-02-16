@@ -1,0 +1,263 @@
+* {
+	border: none;
+	border-radius: 10px;
+	font-family: "JetBrainsMono Nerd Font";
+	font-size: 17px;
+	min-height: 10px;
+}
+
+window#waybar {
+	background: transparent;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+#window {
+	margin-top: 6px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 10px;
+	transition: none;
+        color: transparent;
+	background: transparent;
+}
+#workspaces {
+	margin-top: 6px;
+	margin-left: 12px;
+	font-size: 4px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	background: transparent; /*#161320;*/
+	transition: none;
+}
+
+#workspaces button {
+	transition: none;
+	color: #FFFFFF;
+	background: transparent;
+	font-size: 16px;
+}
+
+#workspaces button.occupied {
+	transition: none;
+	color: #ff002b;
+	background: transparent;
+	font-size: 4px;
+}
+
+#workspaces button.active {
+	color: #ff002b;
+}
+
+#workspaces button:hover {
+	box-shadow: inherit;
+	text-shadow: inherit;
+/*	background-color: #CFCFCF;*/
+	color: #800000;
+	animation: moveUp 0.2s ease-in-out forwards;
+}
+
+@keyframes moveUp {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -7px;
+  }
+  /*100% {
+    margin-top: 0px;
+  }*/
+}
+/*#workspaces button.active:hover {
+    color: #E8A2AF;
+}*/
+
+#network {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 18px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: #FFFFFF;
+	background: transparent;
+}
+
+#pulseaudio {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: #FFFFFF;
+	background: transparent;
+}
+
+#battery {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: #FFFFFF;
+	background: transparent;
+}
+
+#battery.charging, #battery.plugged {
+	color: #FFFFFF;
+    background: transparent;
+}
+
+#battery.critical:not(.charging) {
+    background: transparent;
+    color: #FFFFFF;
+    animation-name: changeColor;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes changeColor {
+  0% {
+    background-color: transparent; /* Start with white */
+  }
+  50% {
+    background-color: #FF0000; /* Change to red at 50% of the animation */
+  }
+  100% {
+    background-color: transparent; /* Return to white at the end */
+  }
+}
+
+@keyframes blink {
+    to {
+        background-color: #BF616A;
+        color: #B5E8E0;
+    }
+}
+
+#backlight {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: #161320;
+	background: #F8BD96;
+}
+#clock {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: #FFFFFF;
+	background: transparent;
+	/*background: #1A1826;*/
+}
+
+#memory {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	margin-bottom: 0px;
+	padding-right: 10px;
+	border-radius: 10px;
+	transition: none;
+	color: #FFFFFF;
+	background: transparent;
+}
+
+#cpu {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	margin-bottom: 0px;
+	padding-right: 10px;
+	border-radius: 10px;
+	transition: none;
+	color: #161320;
+	background: #96CDFB;
+}
+
+#tray {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	margin-bottom: 0px;
+	padding-right: 10px;
+	border-radius: 10px;
+	transition: none;
+	color: #FFFFFF;
+	background: transparent;
+}
+
+#custom-launcher {
+	font-size: 24px;
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 5px;
+	border-radius: 10px;
+	transition: none;
+    color: #89DCEB;
+    background: #161320;
+}
+
+#custom-logolauncher {
+	background-image: url('/home/david/.config/waybar/linux_tux_penguin.png'); /* url('/home/david/.config/waybar/NixOS_red.png'); */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-top: 6px;
+	margin-left: 8px;
+}
+
+#custom-power {
+	font-size: 20px;
+	margin-top: 6px;
+	margin-left: 8px;
+	margin-right: 8px;
+	padding-left: 10px;
+	padding-right: 5px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: #161320;
+	background: #F28FAD;
+}
+
+#custom-wallpaper {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: #161320;
+	background: #C9CBFF;
+}
+
+#custom-spotify {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: #161320;
+	background: #F2CDCD;
+}
